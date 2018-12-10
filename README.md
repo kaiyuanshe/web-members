@@ -2,7 +2,7 @@
 
 ## 工作流程
 
-[](recruit-newbie.png)
+![](recruit-newbie.png)
 
 
 ## 相关User Story
