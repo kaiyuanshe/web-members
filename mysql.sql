@@ -24,3 +24,16 @@ CREATE TABLE IF NOT EXISTS `wechat_friends` (
   `nick_name` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=1;
+
+CREATE TABLE IF NOT EXISTS `messages` (
+  `id` int(5) NOT NULL AUTO_INCREMENT,
+  `type` varchar(255) NOT NULL,
+  `room_id` varchar(255),
+  `room_topic` varchar(255),
+  `from_user_id` varchar(255) NOT NULL,
+  `from_user_name` varchar(255) NOT NULL,
+  `mention_id_list` varchar(3000),
+  `mention_name_list` varchar(3000),
+  `text` varchar(3000),
+  `datatime` datatime NOT NULL,
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=1;
