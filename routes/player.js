@@ -27,10 +27,11 @@ module.exports = {
 	let introduce = req.body.introduce;
 	let referee1 = req.body.referee1;
 	let referee2 = req.body.referee2;
-	db.query("SELECT * FROM wechat_friends WHERE wechat_id='"+wechat_id+"'", (err,result) =>{
+	db.query("SELECT * FROM wechat_friends WHERE wechat_id='"+wechat_id+"' or nick_name='"+nick_name+"'", (err,result) =>{
 	  if(!err){
             if(result.length>0){
               var query = "";
+	      wechat_id = result[0].wechat_id;
 	      if (referee1 && referee2){
 		query = "INSERT INTO `users` (name, wechat_id, nick_name, github_name, referee1, referee2, " + 
 		  "work_group, position, introduce, status) VALUES ('" +
