@@ -28,7 +28,7 @@ db.connect(err => {
   if (err) {
     throw err;
   }
-  console.log("Connected to database");
+  console.log("Successfully connected to database");
 });
 global.db = db;
 

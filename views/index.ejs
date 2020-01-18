@@ -8,7 +8,7 @@
       <div class="col">
         <h3 class="display-4">STEP1</h3>
         <p class="lead">
-          添加我们的微信机器人<span class="bg-danger text-white"
+          添加我们的微信机器人<br /><span class="bg-danger text-white"
             >(否则无法进入STEP2)</span
           >
         </p>
@@ -49,8 +49,8 @@
   </div>
 </section>
 <section>
-  <h4 class="my-4 text-center">开源社现任正式成员表</h4 class="my-4text-center">
-  <table class="table table-striped">
+  <h4 class="my-4 text-center">开源社现任正式成员表</h4>
+  <table class="table table-bordered table-striped">
     <thead>
       <tr>
         <th scope="col">ID</th>
@@ -69,8 +69,14 @@
         <td><%= player.nick_name %></td>
         <td><%= player.work_group %></td>
         <td><%= player.position %></td>
-        <td><%= player.introduce %></td>
-        <td><%= player.status %></td>
+        <td class="w-25"><p class="d-block text-justify small"><%= player.introduce %></p class="text-justify"></td>
+        <% const is_passed = player.status == '已加入' ? true : false %>
+        <td>
+          <span
+            class="badge <%= is_passed ? 'badge-success' : 'badge-danger' %>"
+            ><%= player.status %></span
+          >
+        </td>
       </tr>
       <% }) %> <% } else { %>
       <tr>
