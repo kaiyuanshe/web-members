@@ -5,7 +5,7 @@
     <p class="lead">如果您想参与开源社————</p>
     <hr class="my-4" />
     <div class="row">
-      <div class="col">
+      <div class="col-12 col-lg-6">
         <h3 class="display-4">STEP1</h3>
         <p class="lead">
           添加我们的微信机器人<br /><span class="bg-danger text-white"
@@ -13,7 +13,7 @@
           >
         </p>
       </div>
-      <div class="col">
+      <div class="col-12 col-lg-6">
         <img
           src="https://github.com/kaiyuanshe/wechat-robot/raw/master/logo.png"
           alt="请扫描二维码添加我"
@@ -25,11 +25,11 @@
     </div>
     <hr class="my-4" />
     <div class="row">
-      <div class="col">
+      <div class="col-12 col-lg-6">
         <h3 class="display-4">STEP2</h3>
         <p class="lead">填写申请表格</p>
       </div>
-      <div class="col">
+      <div class="col-12 col-lg-6">
         <a
           class="w-50 btn btn-success btn-lg"
           href="/add_volunteer"
@@ -48,8 +48,8 @@
     </div>
   </div>
 </section>
-<section>
-  <h4 class="my-4 text-center">开源社现任正式成员表</h4>
+<h4 class="my-4 text-center">开源社现任正式成员表</h4>
+<section class="table-responsive">
   <table class="table table-bordered table-striped">
     <thead>
       <tr>
@@ -69,7 +69,9 @@
         <td><%= player.nick_name %></td>
         <td><%= player.work_group %></td>
         <td><%= player.position %></td>
-        <td class="w-25"><p class="d-block text-justify small"><%= player.introduce %></p class="text-justify"></td>
+        <td class="w-25">
+          <p class="d-block text-justify small"><%= player.introduce %></p>
+        </td>
         <% const is_passed = player.status == '已加入' ? true : false %>
         <td>
           <span
