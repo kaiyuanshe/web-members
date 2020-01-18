@@ -29,7 +29,7 @@ module.exports = {
 	let referee2 = req.body.referee2;
 	db.query("SELECT * FROM wechat_friends WHERE wechat_id='"+wechat_id+"' or nick_name='"+nick_name+"'", (err,result) =>{
 	  if(!err){
-            if(result.length>0){
+            if(result.length>=0){
               var query = "";
 	      wechat_id = result[0].wechat_id;
 	      if (referee1 && referee2){
