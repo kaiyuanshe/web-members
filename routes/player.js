@@ -34,7 +34,7 @@ module.exports = {
         "'",
       (err, result) => {
         if (!err) {
-          if (result.length >= 0) {
+          if (result.length > 0) {
             var query = "";
             wechat_id = result[0].wechat_id;
             if (referee1 && referee2) {
